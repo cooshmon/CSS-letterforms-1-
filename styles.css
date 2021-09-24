@@ -1,0 +1,11 @@
+.box {
+  -moz-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
+    skew(-74deg, -49deg);
+  -webkit-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
+    skew(-74deg, -49deg);
+  -o-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
+    skew(-74deg, -49deg);
+  -ms-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
+    skew(-74deg, -49deg);
+  transform: scale(1.4) rotate(91deg) translate(-1px, 15px) skew(-74deg, -49deg);
+}
