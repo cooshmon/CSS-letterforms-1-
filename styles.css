@@ -1,11 +1,467 @@
-.box {
-  -moz-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
-    skew(-74deg, -49deg);
-  -webkit-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
-    skew(-74deg, -49deg);
-  -o-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
-    skew(-74deg, -49deg);
-  -ms-transform: scale(1.4) rotate(91deg) translate(-1px, 15px)
-    skew(-74deg, -49deg);
-  transform: scale(1.4) rotate(91deg) translate(-1px, 15px) skew(-74deg, -49deg);
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 20vh;
+  width: 100vw;
+  height: 100vh;
+  grid-gap: 1%;
+}
+#reddot {
+    grid-column: 2;
+    grid-row: 3;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 5.5s infinite;
+}
+#reddot1 {
+    grid-column: 3;
+    grid-row: 4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 4.5s infinite;
+}
+#reddot2 {
+    grid-column: 1;
+    grid-row: 1;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 10s infinite;
+}
+#reddot3 {
+    grid-column: 4;
+    grid-row: 2;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+}
+#reddot4 {
+    grid-column: 1;
+    grid-row: 4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 9s infinite;
+}
+#reddot5 {
+    grid-column: 4;
+    grid-row: 2;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 5s infinite;
+}
+#reddot6 {
+    grid-column: 4;
+    grid-row: 4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 4s infinite;
+}
+#reddot7 {
+    grid-column: 3;
+    grid-row: 1;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1px 2px 100px pink;
+    animation: dissapear 2s infinite;
+}
+@keyframes dissapear{
+    0% { background-color: red;}
+    50% { background-color: transparent;}100% { background-color: red;}
+}
+#display {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 3;
+  max-height: 547px;
+  border-style: dashed;
+  border-width: 0.8px;
+  padding: 20%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 4vh;
+}
+#right {
+  grid-column: 1;
+  grid-row: 5;
+  border-style: dashed;
+  border-width: 0.4px;
+  height: 10vh;
+}
+
+#right:hover {
+  border-style: none;
+  transform: scale(1.3) translate(90%, -720%);
+}
+
+#accent {
+  width: 500px groove;
+  max-width: 500px;
+  height: 150px;
+  border: groove 1px;
+  border-color: lightgray transparent transparent transparent;
+  border-radius: 50%/100px 100px 0 0;
+  transform: scale(0.3) skew(-71deg, 2deg) translate(1796.9px, 436px);
+  position: relative;
+}
+#circle {
+  height: 300px;
+  width: 300px;
+  transform: skew(-53deg, 10deg) translate(10px, -70px) scale(0.3);
+  border-radius: 180%;
+  border: 3px groove;
+  position: relative;
+}
+
+#connector {
+  width: groove;
+  max-width: 222.8px;
+  height: 300px;
+  border: groove 0.4px;
+  position: relative;
+  border-color: lightgray transparent transparent transparent;
+  border-radius: 252%/400px 100px 0 0;
+  transform: rotate(180deg) skew(70deg, 181deg) translate(-1229.8px, 568px)
+    scale(1.34);
+}
+#connector2 {
+  max-width: 300px;
+  height: 300px;
+  border: groove 0.4px;
+  position: relative;
+  border-color: lightgray transparent transparent transparent;
+  border-radius: 94%/231px 67px 0 0;
+  transform: translate(129px, -413px) rotate(340deg) skew(1deg, 2deg) scale(1.5);
+}
+#bottom {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  transform: scale(0.3) skew(-1003deg, 600deg) translate(-1819px, 519px);
+  border-radius: 180%;
+  border: 3px groove;
+  color: transparent;
+  box-shadow: 100px 6px 100px pink;
+  
+}
+
+#container2 {
+  grid-column: 2;
+  grid-row: 5;
+  border-style: dashed;
+  border-width: 0.4px;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 25% 20px 20px 20px 20px 20%;
+  grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 3fr;
+}
+#container2:hover {
+  border-style: none;
+  transform: scale(3) translate(25%, -180%);
+}
+
+#twocircle1 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 4;
+  grid-row: 2;
+  animation: scale 3s infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+    -webkit-transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+#twocircle2 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 5;
+  grid-row: 2;
+  animation: scale 3s infinite;
+}
+#twocircle3 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 6;
+  grid-row: 3;
+  animation: scale 3s infinite;
+}
+#twocircle4 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 6;
+  grid-row: 4;
+  animation: scale 3s infinite;
+}
+
+#twocircle5 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 5;
+  grid-row: 5;
+  animation: scale 3s infinite;
+}
+#twocircle6 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 4;
+  grid-row: 5;
+  animation: scale 3s infinite;
+}
+#twocircle7 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 3;
+  grid-row: 4;
+  animation: scale 3s infinite;
+}
+#twocircle8 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 3;
+  grid-row: 3;
+  animation: scale 3s infinite;
+}
+#twocircle9 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 6;
+  grid-row: 6;
+  animation: scale 3s infinite;
+}
+#twocircle10 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 6;
+  grid-row: 7;
+  animation: scale 3s infinite;
+}
+#twocircle11 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 5;
+  grid-row: 8;
+  animation: scale 3s infinite;
+}
+#twocircle12 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 4;
+  grid-row: 8;
+  animation: scale 3s infinite;
+}
+#twocircle13 {
+  height: 20px;
+  width: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  grid-column: 3;
+  grid-row: 7;
+  animation: scale 3s infinite;
+}
+
+#container3 {
+  grid-column: 3;
+  grid-row: 5;
+  border-style: dashed;
+  border-width: 0.4px;
+  height: 10vh;
+  justify-content
+}
+#container3:hover {
+  border-style: none;
+  transform: scale(3.5) translate(27%, -140%);
+}
+#threecircle {
+  height: 50px;
+  width: 40px;
+  background-color: transparent;
+  border-radius: 180%;
+  border: 9px rgb(0, 0, 0) solid;
+  z-index: 2;
+  transform: skew(0deg, 0deg) perspective(400px) rotateY(7deg);
+  
+}
+
+
+#threeconnect {
+  height: 80px;
+  width: 9px;
+  border-radius: 0% 0% 6% 10%;
+  background-color: black;
+  z-index: 2;
+  align-content: center;
+  transform: translate(50px, -69px) perspective(400px) rotatey(2deg);
+  animation: shadow 7s infinite;
+}
+#clickable:active {
+  background-color: red;
+}
+#threebottom {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 9px solid;
+  border-color: transparent transparent rgb(0, 0, 0) rgb(0, 0, 0);
+  z-index: 2;
+  transform: rotate(316deg) translate(73px, -74px) skew(0deg, 0deg)
+    perspective(400px) rotateY(3deg);
+    animation: shadow 7s infinite;
+}
+#container4 {
+  grid-column: 4;
+  grid-row: 5;
+  border-style: dashed;
+  border-width: 0.4px;
+  height: 10vh;
+}
+
+#container4:hover {
+  border-style: none;
+  transform: scale(2.9) translate(-14%, -190%);
+}
+#fourcircle {
+  height: 46px;
+  width: 28px;
+  background-color: transparent;
+  border-radius: 46%;
+  border: 20px rgb(134, 164, 229) solid;
+  z-index: 2;
+  transform: skew(0deg, 0deg) perspective(400px) rotateY(0deg) rotatex(0deg)
+    rotate(0deg) translate(0px, 0px);
+}
+#fourconnect {
+  height: 101px;
+  width: 18px;
+  border-radius: 0% 0% -2% -5%;
+  background-color: rgb(134, 164, 229);
+  z-index: 2;
+  align-content: center;
+  transform: translate(51px, -87px) perspective(400px) rotatey(18deg);
+}
+#eyeblack1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  border: 0px;
+  background-color: black;
+  transform: translate(66px, -236px);
+  z-index: 5;
+  animation: move2 3s infinite;
+}
+@keyframes move2 {
+  0% {
+    transform: translate(66px, -236px);
+  }
+  50% {
+    transform: translate(68px, -236px);
+  }
+  100% {
+    transform: translate(66px, -236px);
+  }
+}
+#eyeblack2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  border: 0px;
+  background-color: black;
+  transform: translate(44px, -243px);
+  z-index: 5;
+  animation: move 3s infinite;
+}
+@keyframes move {
+  0% {
+    transform: translate(44px, -243px);
+  }
+  50% {
+    transform: translate(46px, -243px);
+  }
+  100% {
+    transform: translate(44px, -243px);
+  }
+}
+#eyewhite1 {
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  border: 1px solid black;
+  background-color: white;
+  transform: translate(62px, -198px);
+  z-index: 5;
+}
+
+#eyewhite2 {
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  border: 1px solid black;
+  background-color: white;
+  transform: translate(40px, -215px);
+  z-index: 3;
+}
+
+#fourbottom {
+  height: 36px;
+  width: 35px;
+  background-color: transparent;
+  border-radius: 48%;
+  border: 18px solid;
+  border-color: transparent transparent rgb(134, 164, 229) rgb(134, 164, 229);
+  z-index: 2;
+  transform: rotate(315deg) translate(131px, -134px) skew(-2deg, -1deg)
+    perspective(400px) rotateY(4deg) rotatex(0deg);
 }
